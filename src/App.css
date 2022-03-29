@@ -1,0 +1,98 @@
+
+.todo-container{
+  max-width: 54rem;
+  margin: auto;
+}
+.upperline hr{
+    width: 100%;
+}
+
+.todolist-heading{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+  padding-top: 30px;
+}
+.todo-btn{
+  padding: 7px 15px 7px 15px !important;
+  background-color: #ff6900 !important;
+    border-color: #ff8d3e !important;
+  
+}
+.todo-btn:hover{
+  background-color: #df5d01 !important ;
+  border-color: #df5d01 !important;
+}
+
+.list{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 550; 
+  padding-top: 15px;
+  word-spacing: 3px;
+}
+.des{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  word-spacing: 3px;
+}
+
+.todo-cont{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-gap: 10px; 
+}
+.text-cont{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+}
+.title{
+  position: relative;
+  left: 31%;
+  align-self: start;
+  width: 60%;
+}
+.descript{
+  position: relative;
+  left: 35%;
+  grid-auto-rows: minmax(100px,auto);
+  width: 60%;
+}
+.list-line{
+  position: relative;
+  left: 30%;
+  
+}
+.button-cont{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+ 
+}
+.edit{
+  padding-top: 15px;
+  
+}
+
+.del{
+  padding-top: 15px;
+}
+.edit-btn{
+  width: 70px;
+  background-color: #0059dc !important;
+  
+}
+.edit-btn:hover{
+  background-color: #024fc2 !important;
+}
+.delete-btn{
+  background-color: #ff0f27 !important;
+}
+.delete-btn:hover{
+  background-color: #e00016 !important;
+}
+
+hr{
+  width: 82%;
+}
+

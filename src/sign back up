@@ -1,0 +1,274 @@
+ // const [submit, setSubmit] = useState(false);
+  // const [errors, setErrors]= useState();
+
+import Login from "./Loginout/Login"
+
+
+  // const addUser = async () => {
+  //   const response = await axios.post("http://localhost:8000/auth", data);
+  //   if (response.data.sucess === true) {
+  //     setSubmit(true);
+  //   } else {
+  //     alert(" cant send error");
+  //   }
+  // };
+
+  // const saveUser = async () => {
+  //   addUser();
+  //   };
+
+  <Form className="form" onSubmit={handleSubmit(onSubmit)} >
+              <Row className="mb-3">
+                <Form.Group as={Col} className="signup-fn">
+                  <Form.Label className="signup-fn-text">FIRST NAME</Form.Label>
+                  <Form.Control tag={Field} placeholder="First name"  
+                  name="firstname" 
+                  value={value.firstname} 
+                  component={renderField}
+                  label='first name'
+                  onChange={(e) => setValue({ ...value, firstname: e.target.value })} />
+                  {/* {errors.firstname&& <p>{errors.firstname}</p>} */}
+                  {/* <p className="name-error">{errors.firstname}</p> */}
+                </Form.Group>
+                
+                
+                <Form.Group as={Col} className="signup-ln">
+                  <Form.Label className="signup-ln-text">LAST NAME</Form.Label>
+                  <Form.Control tag={Field} placeholder="Last name" 
+                  name="lastname" 
+                  value={value.lastname}
+                  component={renderField}
+                  label='last name'
+                  onChange={(e) => setValue({ ...value, lastname: e.target.value })}/>
+                  {/* <p className="error">{formerrors.lastname}</p> */}
+                </Form.Group>
+                <Form.Group className="signup-pn">
+                  <Form.Label className="signup-pn-text">PHONE NUMBER</Form.Label>
+                  <Form.Control tag={Field} placeholder="Eg: +977 0000000000" 
+                  name="phonenumber" 
+                  value={value.phonenumber}
+                  component={renderField}
+                  label='0123456789'
+                  onChange={(e) =>setValue({ ...value, phonenumber: e.target.value })}/>
+                  {/* <p className="error">{formerrors.phonenumber}</p> */}
+                </Form.Group>
+                <Form.Group className="signup-email" controlId="formGridEmail">
+                  <Form.Label className="signup-email-text"> Email</Form.Label>
+                  <Form.Control tag={Field} type="email" placeholder="example@email.com" 
+                  name="email" 
+                  value={value.email}
+                  component={renderField}
+                  label='example@gmail.com'
+                  onChange={(e) =>setValue({ ...value, email: e.target.value })}/>
+                  {/* <p className="error">{errors.email}</p> */}
+                </Form.Group>
+                <Form.Group className="mb-3" as={Col} className="signup-ps"controlId="formBasicPassword" >
+                  <Form.Label className="signup-ps-text">Password</Form.Label>
+                  <Form.Control tag={Field} type="password" placeholder="Password" 
+                  name="password" 
+                  value={value.password}
+                  component={renderField}
+                  label='enter password'
+                  onChange={(e) =>setValue({ ...value, password: e.target.value })}/>
+                  {/* <p className="error">{formerrors.password}</p> */}
+                </Form.Group>
+                <Form.Group className="mb-3" as={Col} className="signup-cps" controlId="formBasicPassword" >
+                  <Form.Label className="signup-cps-text"> Confirm Password </Form.Label>
+                  <Form.Control tag={Field} type="password" placeholder="Password" 
+                  name="confirmpassword" 
+                  value={value.confirmpassword}
+                  component={renderField}
+                  label='firm password'
+                  onChange={(e) => setValue({ ...value, confirmpassword: e.target.value })}/>
+                  {/* <p className="error">{formerrors.confirmpassword}</p> */}
+                </Form.Group>
+              </Row>
+              <div className="signup-btn-container">
+                <Button 
+                type='submit'
+                className="signup-btn" 
+                // onClick={saveUser}
+                >Create</Button>
+              </div>
+            </Form>
+
+            -----------------
+
+            <Form className="form" onSubmit={handleSubmit(onSubmit)}>
+              <Row className="mb-3">
+               <Form.Group as={Col} className="signup-fn">
+               
+                 <label className="signup-fn-text" htmlFor="email">First Name</label>
+                 <Field name="firstname" 
+                 type="text" 
+                 className="form-control" 
+                 component={renderField}
+                 label="first name"
+                 />
+               </Form.Group>
+               <Form.Group as={Col} className="signup-ln">
+                 <label className="signup-ln-text" htmlFor='email'>Last Name</label>
+                 <Field
+                 name='lastname'
+                 type='text'
+                 className='form-control'
+                 component={renderField}
+                 label='last name'
+                 />
+               </Form.Group>
+               <Form.Group className="signup-email">
+                 <label className="signup-email-text" htmlFor='email'>Email</label>
+                 <Field
+                 name='email'
+                 type='email'
+                 className='form-control'
+                 component={renderField}
+                 label='example@12gmail.com'
+                 />
+               </Form.Group>
+               <Form.Group className="signup-pn">
+                 <label className="signup-pn-text" htmlFor='email'>Phone Number</label>
+                 <Field
+                 name='phonenumber'
+                 type='text'
+                 className='form-control'
+                 component={renderField}
+                 label='phone number'
+                 />
+               </Form.Group>
+               <Form.Group className="mb-3" as={Col} className="signup-ps">
+                 <label  className="signup-ps-text" htmlFor='password'>Password</label>
+                 <Field
+                 name='password'
+                 type='password'
+                 className='form-control'
+                 component={renderField}
+                 label='enter password'
+                 />
+               </Form.Group>
+               <Form.Group className="mb-3" as={Col} className="signup-cps">
+                 <label  className="signup-cps-text" htmlFor='password'>Confirm Password</label>
+                 <Field
+                 name='confirmpassword'
+                 type='password'
+                 className='form-control'
+                 component={renderField}
+                 label='enter confirm password'
+                 />
+                
+               </Form.Group>
+               </Row>
+               <div className="signup-btn-container">
+               <button className="signup-btn" type='submit'>
+                 Create
+               </button>
+               </div>
+            </Form>
+
+            ----------------------------Login
+            import React from 'react';
+import bg2 from '../images/bb.jpg';
+import { Row } from 'react-bootstrap';
+import {Form,Button,Nav} from 'react-bootstrap';
+import {useState, useEffect} from 'react';
+import axios from 'axios';
+import {reduxForm} from 'redux-form';
+
+function Login(){
+    const [value,setValue] = useState("");
+    const [enter,setEntered] = useState(false);
+    const [formerrors,setFormErrors] = useState({});
+
+    var user ={
+        email:value.email,
+        password:value.password
+
+    }
+
+    const userlogin = async()=>{
+        const response = await axios.post("http://localhost:8000/auth/login", user)
+        if(response.data.sucess===true){
+           setEntered(true);
+           
+        }else{
+            // alert('error');
+        }
+    }
+
+    const logedIn = async()=>{
+        setFormErrors(validate(value))
+        userlogin();
+    };
+
+    useEffect(()=>{
+        console.log(formerrors)
+       if(Object.keys(formerrors).length === 0&& enter){
+         console.log(value);
+       }
+      },[formerrors])
+
+      const validate = (values) =>{
+        const errors = {};
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+        if(!values.email){
+         errors.email = "Email is required!";
+        }else if(!regex.test(values.email)){
+         errors.email="Email format invalid";
+       }
+       if(!values.password){
+         errors.password = "Password is required!";
+       }
+        return errors;
+     }
+
+
+    return(
+        <div className="bg-img-container">
+            <img className="login-background" src = {bg2} alt=""></img>
+        <div className="login-container">
+            <div className="login-left">
+                <h1 className="login-heading">YOUR TO-DO</h1>
+                <h1 className="login-text">DON'T HAVE AN ACCOUNT?</h1>
+                <h1 className="login-text2">Register to access all the features of our service.<br/><br/> <br/><br/>
+                Manager your works in one place. It's safe and free to use.</h1>
+                <div className="login-right-btn-container">
+                    <Button className="login-right-btn" href="./about" >Learn More </Button>
+                </div>
+            
+            </div>
+            <div className="login-right">
+            <div className="heading-left"> <a className="signin-heading" href="/">SIGN IN</a></div>
+            <div className="heading-mid"><h1 className="vr-line">|</h1></div> 
+            <div className="heading-right"><a className="signup-heading" href="./signup">SIGN UP</a></div>
+            <div className="login-form">
+            <Form>
+                    <Row className="mb-3">
+                        <Form.Group className="login-email" controlId="formGridEmail">
+                            <Form.Label className="login-email-text">EMAIL </Form.Label>
+                            <Form.Control type="email" name="email"
+                            onChange={(e) => setValue({ ...value, email: e.target.value })}
+                            placeholder="example@email.com" />
+                            <p className="error">{formerrors.email}</p>
+                        </Form.Group>
+                        <Form.Group className="mb-3" className="login-password" controlId="formBasicPassword">
+                            <Form.Label className="login-pass-text">PASSWORD</Form.Label>
+                            <Form.Control type="password" name="password"
+                            onChange={(e) => setValue({ ...value, password: e.target.value })} placeholder="Password" />
+                            <p className="error">{formerrors.password}</p>
+                        </Form.Group>
+                        <Nav.Link className="forget-password" href="#">Forgot password?</Nav.Link>
+                    </Row>
+                </Form>
+                </div>
+                <div className="login-btn-container">
+                    <Button className="login-btn" onClick={logedIn} >Log in </Button>
+                    </div>
+            </div>
+            
+            
+        </div>
+        </div>
+    )
+}
+
+export default Login
